@@ -12,7 +12,7 @@ chrome.browserAction.onClicked.addListener(
     var today = new Date(),
         dof = (today.getDay()+1)%7,
         d1 = format(today),
-        d2 = format(new Date(today.getTime() + ((3 * 7 - dof+1) * 24 * 60 * 60 * 1000)));
+        d2 = format(new Date(today.getTime() + ((5 * 7 - dof+1) * 24 * 60 * 60 * 1000)));
 
     chrome.tabs.create(
       {
