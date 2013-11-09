@@ -10,14 +10,15 @@ chrome.browserAction.onClicked.addListener(
     var first = true;
 
     var today = new Date(),
-        dof = (today.getDay()+1)%7,
+        dof = (today.getDay()-1)%7,
         d1 = format(today),
-        d2 = format(new Date(today.getTime() + ((5 * 7 - dof+1) * 24 * 60 * 60 * 1000)));
+        d2 = format(new Date(today.getTime() + ((6 * 7 - dof-1) * 24 * 60 * 60 * 1000)));
+        //d2 = format(new Date("02.01.2014"));
 
     chrome.tabs.create(
       {
         active: true,
-        url:"http://cist.kture.kharkov.ua/ias/app/tt/f?p=778:201:4195128929910427:::201:P201_FIRST_DATE,P201_LAST_DATE,P201_GROUP,P201_POTOK:"+d1+","+d2+","+(first ? "2944121" : "3637184")+",0:"
+        url:"http://cist.kture.kharkov.ua/ias/app/tt/f?p=778:201:2554421700918417:::201:P201_FIRST_DATE,P201_LAST_DATE,P201_GROUP,P201_POTOK:"+d1+","+d2+","+(first ? "2944121" : "3637184")+",0:"
       },
       function(){}
     );

@@ -1,7 +1,7 @@
 {
   "name": "Расписание ИНФ-10-1",
-  "version": "1.2",
-  "description": "Иконка возле адресной строки открывает расписание на 3 недели. Подсвечивает сегодняшний день (везде)",
+  "version": "1.6",
+  "description": "Иконка возле адресной строки открывает расписание. Подсвечивает сегодняшний день (везде)",
   "permissions": [
     "cookies",
     "tabs",
@@ -18,8 +18,9 @@
     {
       "matches": [ "http://cist.kture.kharkov.ua/*P201_FIRST_DATE,P201_LAST_DATE,P201_GROUP,P201_POTOK*",
                    "http://cist.kture.kharkov.ua/*P202_FIRST_DATE,P202_LAST_DATE,P202_SOTR,P202_KAF*" ],
-      "js": [ "jquery.js", "inject.js" ],
+      "js": [ "inject.js" ],
     "run_at": "document_end"
     }
-  ]
+  ],
+  "web_accessible_resources": [ "jquery.js", "jquery-ui.js", "injected.js" ]
 }
